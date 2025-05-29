@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recursos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="schema.xsd">
+  <recurso>
+    <titulo>História de Portugal - 5º ano</titulo>
+    <tipo>Vídeo</tipo>
+    <link>https://www.youtube.com/watch?v=exemplo1</link>
+  </recurso>
+  <recurso>
+    <titulo>Matemática Básica - Exercícios Interativos</titulo>
+    <tipo>Website</tipo>
+    <link>https://www.exerciciosmat.pt</link>
+  </recurso>
+  <recurso>
+    <titulo>Ciência para Crianças</titulo>
+    <tipo>Artigo</tipo>
+    <link>https://www.cienciafacil.pt/artigo123</link>
+  </recurso>
+</recursos>

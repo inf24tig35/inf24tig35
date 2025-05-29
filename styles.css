@@ -1,0 +1,136 @@
+/* Tipos de seletores simples e combinadores */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #202020;
+  }
+  
+  header, footer {
+    background-color: #202020;
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  main {
+    padding: 2em;
+    background-color: white;
+  }
+  
+  /* Pseudo-classe */
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilo de tabela */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1em;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+    padding: 0.75em;
+  }
+  
+  thead {
+    background-color: #202020;
+    color: white;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Formatação de listas */
+  ul, ol {
+    margin-left: 2em;
+    margin-bottom: 1em;
+  }
+  
+  /* Formatação de destaque com CSS */
+  strong {
+    color: #b30000;
+  }
+  
+  mark {
+    background-color: yellow;
+    font-weight: bold;
+  }
+  
+  /* Estilo de formulário */
+  form {
+    max-width: 500px;
+    margin: auto;
+    background: #eee;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 1em;
+  }
+  
+  input, textarea, button {
+    width: 100%;
+    padding: 0.75em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #202020;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #444;
+  }
+  
+  /* Flexbox */
+  #conteudos-xml {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  
+  /* Transições e transformações */
+  button {
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Media queries para responsividade */
+  @media screen and (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 1em;
+    }
+  
+    form {
+      width: 90%;
+    }
+  }
