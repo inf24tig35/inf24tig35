@@ -56,5 +56,3 @@ O projeto consiste numa plataforma educativa estática com conteúdos gratuitos 
 ## Equipa
 
 * Duarte Ferreira [@duarte35](https://github.com/duarte35)
-* Nome do colega 1
-* Nome do colega 2
