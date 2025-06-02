@@ -1,10 +1,10 @@
 # Ensino para Todos
 
-Repositório para alojar o projeto desenvolvido na unidade curricular de Tecnologias Web, 1º ano da licenciatura. Desenvolvido pelo grupo ALPHA: [@duarte35](https://github.com/duarte35), [@outro_membro](https://github.com/outro_membro)
+Repositório para alojar o projeto desenvolvido na unidade curricular de Tecnologias e Internet, 1º ano da licenciatura. Desenvolvido pelo grupo ALPHA: [@duarte35](https://github.com/duarte35).
 
 ## Descrição do Projeto
 
-O projeto consiste numa plataforma educativa estática com conteúdos gratuitos para apoio ao estudo de alunos dos 2.º e 3.º ciclos. Foi utilizado HTML5, CSS3 e JavaScript para cumprir todos os requisitos definidos no enunciado da UC.
+O projeto consiste numa plataforma educativa estática com conteúdos gratuitos para apoio ao estudo de alunos dos 2.º e 3.º ciclos. Foi utilizado HTML5, CSS3 e JavaScript para cumprir todos os requisitos definidos no enunciado.
 
 ## Organização do Repositório
 
