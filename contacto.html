@@ -20,16 +20,17 @@
   </header>
 
   <main>
-    <h2 style="text-align: center;">Envia-nos uma mensagem e tira as tuas dúvidas!!</h2>
-    <form>
+    <h2 style="text-align: center; margin-top: 1em;">Envia-nos uma mensagem e tira as tuas dúvidas!!</h2>
+
+    <form style="max-width: 400px; margin: 2em auto; background: #f9f9f9; padding: 2em; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
       <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
+      <input type="text" id="nome" name="nome" required style="box-sizing: border-box;">
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" required style="box-sizing: border-box;">
 
       <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+      <textarea id="mensagem" name="mensagem" rows="5" required style="box-sizing: border-box;"></textarea>
 
       <button type="submit">Enviar</button>
     </form>
