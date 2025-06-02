@@ -5,6 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre o Projeto</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1em;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 1em;
+      text-align: left;
+    }
+
+    thead {
+      background-color: #202020;
+      color: white;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    h2 {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -22,27 +51,35 @@
   <main>
     <section>
       <h2>Objetivo</h2>
-      <p>Este site visa disponibilizar conteúdos educativos gratuitos e acessíveis a todos.</p>
+      <p style="text-align: center;">Este site visa disponibilizar conteúdos educativos gratuitos e acessíveis a todos.</p>
     </section>
+
     <section>
-      <h2>Disciplinas Disponíveis</h2>
-      <ul>
-        <li>Matemática</li>
-        <li>Português</li>
-        <li>Fisica e Quimica</li>
-        <li>Biologia</li>
-        <li>História</li>
-        <li>Geografia</li>
-        <li>Inglês</li>
-        <li>Espanhol</li>
-        <li>Francês</li>
-        <li>Alemão</li>
-        <li>Artes</li>
-        <li>Música</li>
-        <li>Educação Física</li>
-        <li>Educação Moral e Cívica</li>
-        <li>Educação Visual</li>
-      </ul>
+      <h2>📘 Disciplinas Disponíveis 📘</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Disciplina</th>
+            <th>Ciclo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Matemática</td><td>2.º e 3.º Ciclo</td></tr>
+          <tr><td>Português</td><td>2.º e 3.º Ciclo</td></tr>
+          <tr><td>Física e Química</td><td>3.º Ciclo</td></tr>
+          <tr><td>Biologia</td><td>3.º Ciclo</td></tr>
+          <tr><td>História</td><td>2.º e 3.º Ciclo</td></tr>
+          <tr><td>Geografia</td><td>2.º e 3.º Ciclo</td></tr>
+          <tr><td>Inglês</td><td>2.º e 3.º Ciclo</td></tr>
+          <tr><td>Espanhol</td><td>3.º Ciclo</td></tr>
+          <tr><td>Francês</td><td>3.º Ciclo</td></tr>
+          <tr><td>Alemão</td><td>3.º Ciclo</td></tr>
+          <tr><td>Artes</td><td>2.º e 3.º Ciclo</td></tr>
+          <tr><td>Música</td><td>2.º Ciclo</td></tr>
+          <tr><td>Educação Física</td><td>2.º e 3.º Ciclo</td></tr>
+          <tr><td>Educação Visual</td><td>2.º Ciclo</td></tr>
+        </tbody>
+      </table>
     </section>
   </main>
 
