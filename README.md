@@ -1,6 +1,6 @@
 # Ensino para Todos
 
-Repositório para alojar o projeto desenvolvido na unidade curricular de Tecnologias e Internet, 1º ano da licenciatura. Desenvolvido pelo grupo ALPHA: [@duarte35](https://github.com/duarte35).
+Repositório para alojar o projeto desenvolvido na unidade curricular de Tecnologias e Internet, 1º ano da licenciatura. Desenvolvido pelo elemento [@duarte35](https://github.com/duarte35).
 
 ## Descrição do Projeto
 
@@ -8,10 +8,10 @@ O projeto consiste numa plataforma educativa estática com conteúdos gratuitos 
 
 ## Organização do Repositório
 
-* **Ficheiros HTML**: páginas principais (`index.html`, `sobre.html`, `recursos.html`, `contacto.html`)
-* **Estilos CSS**: ficheiro central `styles.css`
-* **JavaScript**: `script.js` para carregamento dinâmico de conteúdo XML
-* **Conteúdo XML**: `conteudos.xml` com dados estruturados e `schema.xsd` para validação
+* **Ficheiros HTML**: páginas principais (`index.html`, `sobre.html`, `recursos.html`, `contacto.html`) na [srs source](src/).
+* **Estilos CSS**: ficheiro central `styles.css` na [srs source](src/).
+* **JavaScript**: `script.js` para carregamento dinâmico de conteúdo XML na [srs source](src/).
+* **Conteúdo XML**: `conteudos.xml` com dados estruturados e `schema.xsd` para validação na [srs source](src/).
 * **Imagens**: incluídas através de URLs
 
 ## Galeria de Resultados
