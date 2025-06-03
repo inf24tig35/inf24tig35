@@ -40,22 +40,22 @@ O projeto consiste numa plataforma educativa estática com conteúdos gratuitos 
 
 ## Relatório
 
-### Capítulo 1: Apresentação do Projeto
-- Plataforma com 4 páginas estáticas para consulta e apoio ao estudo
-- Integração de conteúdos XML de forma dinâmica usando JavaScript
+### Capítulo 1: Apresentação do Projeto  
+- Plataforma com 4 páginas estáticas para consulta e apoio ao estudo [Apresentação](doc/cd1.md)
+- Integração de conteúdos XML de forma dinâmica usando JavaScript [Apresentação](doc/cd1.md)
 
 ### Capítulo 2: Interface Gráfica
-- Interface responsiva
-- Utilização de Flexbox para disposição de elementos
-- Estilo uniforme com CSS externo
+- Interface responsiva [Interface](doc/cd2.md)
+- Utilização de Flexbox para disposição de elementos [Interface](doc/cd2.md)
+- Estilo uniforme com CSS externo [Interface](doc/cd2.md)
 
 ### Capítulo 3: Produto Final
-- Conteúdos organizados por disciplina e ciclo de ensino
-- Carregamento automático de cartões educativos a partir de `conteudos.xml`
+- Conteúdos organizados por disciplina e ciclo de ensino [Produto Final](doc/cd3.md)
+- Carregamento automático de cartões educativos a partir de `conteudos.xml` [Produto Final](doc/cd3.md)
 
 ### Capítulo 4: Validação e Conclusão
-- Testado com validadores HTML e CSS
-- Cumprimento de todos os requisitos definidos no enunciado
+- Testado com validadores HTML e CSS [Validação e Conclusão](doc/cd4.md)
+- Cumprimento de todos os requisitos definidos no enunciado [Validação e Conclusão](doc/cd4.md)
 
 ## Equipa
 
