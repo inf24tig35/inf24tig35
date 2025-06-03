@@ -8,17 +8,17 @@ O projeto consiste numa plataforma educativa estática com conteúdos gratuitos 
 
 ## Organização do Repositório
 
-* **Ficheiros HTML**: páginas principais (`index.html`, `sobre.html`, `recursos.html`, `contacto.html`) na [src source](src/).
-* **Estilos CSS**: ficheiro central `styles.css` na [src source](src/).
-* **JavaScript**: `script.js` para carregamento dinâmico de conteúdo XML na [src source](src/).
-* **Conteúdo XML**: `conteudos.xml` com dados estruturados e `schema.xsd` para validação na [src source](src/).
-* **Imagens**: incluídas através de URLs
+* **Ficheiros HTML**: páginas principais (`index.html`, `sobre.html`, `recursos.html`, `contacto.html`) 
+* **Estilos CSS**: ficheiro central `styles.css` 
+* **JavaScript**: `script.js` para carregamento dinâmico de conteúdo XML 
+* **Conteúdo XML**: `conteudos.xml` com dados estruturados e `schema.xsd` para validação 
+* **Imagens**: incluídas através de URLs 
 
 ## Galeria de Resultados
 
-| Página Inicial                          | Recursos XML Dinâmicos               |
+| Página Inicial                          | Sobre                               |
 |----------------------------------------|--------------------------------------|
-| ![Index](screenshots/index.png)        | ![Recursos](screenshots/recursos.png) |
+| ![Index](doc/images/index.png)        | ![sobre](doc/images/objetivo.png) |
 
 > Capturas de ecrã ilustrativas das páginas principais desenvolvidas.
 
