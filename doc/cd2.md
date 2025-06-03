@@ -19,22 +19,6 @@ A interface é simples, intuitiva e destaca-se pela clareza visual e facilidade 
 - Estilo de cartões para visualização de recursos interativos.
 - Responsividade garantida com Flexbox e media queries.
 
-## Sketches
-
-> Exemplo de rascunho da homepage:
-
-![Sketch homepage](imagens/sketch-homepage.jpg)
-
-Descrição: Representação visual inicial da homepage com distribuição de secções e botão de ação.
-
-## Wireframes
-
-> Exemplo de estrutura planeada:
-
-![Wireframe geral](imagens/wireframe-home-recursos.png)
-
-Descrição: Visualização de layout das páginas principais com foco em acessibilidade e divisão clara de conteúdos.
-
 ## Sitemap
 
 ```plaintext
@@ -45,7 +29,7 @@ Home
 │   └── Lista dinâmica de conteúdos (via XML)
 └── Contacto
     └── Formulário (Nome, Email, Mensagem)
-
+```
 
 ---
 [< Previous](c1.md) | [^ Main](../../../) | [Next >](c3.md)
