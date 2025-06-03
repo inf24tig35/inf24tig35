@@ -5,10 +5,9 @@ Ajuda ao estudo do 2º e 3º ciclo
 ## 3.1 Installation
 
 
-O projeto Ensino TI está hospedado no GitHub, disponível para acesso e colaboração. Para executar localmente, basta clonar o repositório, abrir a pasta no editor e usar um servidor HTTP simples (ex: `python -m http.server`) para servir os ficheiros estáticos.
+O projeto Ensino TI está no GitHub, disponível para acesso e colaboração. Para executar localmente, basta clonar o repositório, abrir a pasta no editor e usar um servidor HTTP simples (ex: `python -m http.server`) para abrir os ficheiros estáticos.
 
 ## 3.2 Usage
-
 
 O website é estático, acessível a qualquer utilizador sem necessidade de autenticação. Basta abrir o navegador e navegar nas páginas disponibilizadas.
 
