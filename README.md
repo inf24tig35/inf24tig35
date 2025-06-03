@@ -12,7 +12,7 @@ O projeto consiste numa plataforma educativa estática com conteúdos gratuitos 
 * **Estilos CSS**: ficheiro central `styles.css` 
 * **JavaScript**: `script.js` para carregamento dinâmico de conteúdo XML 
 * **Conteúdo XML**: `conteudos.xml` com dados estruturados e `schema.xsd` para validação 
-* **Imagens**: incluídas através de URLs 
+* **Imagens**: incluídas através de URLs [imagens](doc/imagens)
 
 ## Galeria de Resultados
 
