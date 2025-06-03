@@ -18,5 +18,5 @@ Estao disponiveis videos, exercicios, laboratórios e documentação e uma aba p
 
 ---
 _You can add a footer menu for navigation_ 
-< Previous | [^ Main](../../../) | [Next >](c2.md)
+< Previous | [^ Main](../../../) | [Next >](doc/c2.md)
 :--- | :---: | ---: 
