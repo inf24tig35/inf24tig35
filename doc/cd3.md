@@ -1,40 +1,31 @@
 # C3 : Product
 
-Add a product description
+Ajuda ao estudo do 2º e 3º ciclo
 
 ## 3.1 Installation
 
-Describe the process used to install the product. Start by the definition of the organization in Github.
 
 O projeto Ensino TI está hospedado no GitHub, disponível para acesso e colaboração. Para executar localmente, basta clonar o repositório, abrir a pasta no editor e usar um servidor HTTP simples (ex: `python -m http.server`) para servir os ficheiros estáticos.
 
 ## 3.2 Usage
 
-If any, please add usage instructions, such as required authentication, or product limitations
 
 O website é estático, acessível a qualquer utilizador sem necessidade de autenticação. Basta abrir o navegador e navegar nas páginas disponibilizadas.
 
 ## 3.3 Application/Product help
 
-Are there any visual cues to help the navigation? Code colors? Tooltips that help the user navigate on the website? Describe how the graphical interface is organized and how the user can move around.
-
 A interface apresenta um menu de navegação fixo no topo, com links para as quatro páginas principais: Início, Sobre, Recursos e Contacto. Os conteúdos são organizados de forma clara, com uso de cartões e listas, garantindo fácil acesso às informações.
 
 ## 3.4 Forms
-
-If any, how are you validating user input on the forms? Describe with examples.
 
 A página Contacto possui um formulário de contacto simples com validação básica através do atributo HTML5 `required` em cada campo (nome, email e mensagem), garantindo que os campos essenciais sejam preenchidos antes do envio.
 
 ## 3.5 HTML5 and CSS3 validation
 
-Describe the method used to validate HTML and CSS. Don't forget to add details about the used validators. Show the validation results. Add images, tables or reports of the tests performed. You can start by adding direct links to the validators: [HTML Validator](https://validator.w3.org/) [CSS Validator](https://jigsaw.w3.org/css-validator/)
-
 O código HTML e CSS foi validado utilizando os validadores oficiais da W3C, garantindo conformidade com os standards e evitando erros de sintaxe.
 
 ## 3.6 Implementation details
 
-This is a mandatory table for your report. Show here how you have fullfilled the minimum required objectives. All Requirements must have a Usage Example with the code being shown in the table.
 
 | Requirement                | Usage Example                                                                                      |
 |----------------------------|--------------------------------------------------------------------------------------------------|
@@ -76,8 +67,6 @@ This is a mandatory table for your report. Show here how you have fullfilled the
 | XSD file                   | `schema.xsd`                                      |
 
 ## 3.7 Other relevant implementation details
-
-Show here valorization elements you added to your work.
 
 - Utilização de Javascript para carregar o conteúdo XML dinamicamente no HTML.
 - Implementação de cartões com animações e emojis indicativos do tipo de recurso.
