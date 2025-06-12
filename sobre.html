@@ -3,64 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto</title>
+  <title>Sobre o Projeto</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Estilos básicos para o formulário */
-    form {
-      max-width: 600px;
-      margin: 2em auto;
-      padding: 2em;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background-color: #f9f9f9;
-    }
-    label {
-      display: block;
-      margin-bottom: 0.5em;
-      font-weight: bold;
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea {
+    table {
+      border-collapse: collapse;
       width: 100%;
-      padding: 0.8em;
-      margin-bottom: 1em;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
+      margin-top: 1em;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
     }
-    textarea {
-      resize: vertical;
-      min-height: 100px;
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 1em;
+      text-align: left;
     }
-    button[type="submit"] {
+
+    thead {
       background-color: #202020;
       color: white;
-      padding: 0.8em 1.5em;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1em;
     }
-    button[type="submit"]:hover {
-      background-color: #333;
+
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
     }
-    .success-message {
-      color: green;
+
+    h2 {
       text-align: center;
-      margin-top: 1em;
-    }
-    .error-message {
-      color: red;
-      text-align: center;
-      margin-top: 1em;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Contacto</h1>
+    <h1>Sobre o Projeto</h1>
     <nav>
       <ul>
         <li><a href="index.html">Início</a></li>
@@ -73,66 +50,41 @@
 
   <main>
     <section>
-      <h2>Envie-nos uma mensagem</h2>
-      <form id="contactForm" action="SEU_ENDPOINT_NO_SERVIDOR" method="POST">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" required />
+      <h2>Objetivo</h2>
+      <p style="text-align: center;">Este site visa disponibilizar conteúdos educativos gratuitos e acessíveis a todos.</p>
+    </section>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="subject">Assunto:</label>
-        <input type="text" id="subject" name="subject" />
-
-        <label for="message">Mensagem:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Enviar Mensagem</button>
-
-        <div id="formStatus"></div>
-      </form>
-      </section>
+    <section>
+      <h2>📘 Disciplinas Disponíveis 📘</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Disciplina</th>
+            <th>Ciclo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Matemática</td><td>2.º e 3.º Ciclo</td></tr>
+          <tr><td>Português</td><td>2.º e 3.º Ciclo</td></tr>
+          <tr><td>Física e Química</td><td>3.º Ciclo</td></tr>
+          <tr><td>Biologia</td><td>3.º Ciclo</td></tr>
+          <tr><td>História</td><td>2.º e 3.º Ciclo</td></tr>
+          <tr><td>Geografia</td><td>2.º e 3.º Ciclo</td></tr>
+          <tr><td>Inglês</td><td>2.º e 3.º Ciclo</td></tr>
+          <tr><td>Espanhol</td><td>3.º Ciclo</td></tr>
+          <tr><td>Francês</td><td>3.º Ciclo</td></tr>
+          <tr><td>Alemão</td><td>3.º Ciclo</td></tr>
+          <tr><td>Artes</td><td>2.º e 3.º Ciclo</td></tr>
+          <tr><td>Música</td><td>2.º Ciclo</td></tr>
+          <tr><td>Educação Física</td><td>2.º e 3.º Ciclo</td></tr>
+          <tr><td>Educação Visual</td><td>2.º Ciclo</td></tr>
+        </tbody>
+      </table>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 - Projeto Ensino TI</p>
   </footer>
-
-  <script>
-    // Este JavaScript irá enviar o formulário de forma assíncrona (AJAX)
-    const contactForm = document.getElementById('contactForm');
-    const formStatus = document.getElementById('formStatus');
-
-    contactForm.addEventListener('submit', async (event) => {
-      event.preventDefault(); // Impede o envio tradicional do formulário
-
-      const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData.entries());
-
-      try {
-        const response = await fetch(contactForm.action, {
-          method: contactForm.method,
-          headers: {
-            'Content-Type': 'application/json' // Indica ao servidor que estamos a enviar JSON
-          },
-          body: JSON.stringify(data) // Envia os dados do formulário como JSON
-        });
-
-        if (response.ok) {
-          formStatus.className = 'success-message';
-          formStatus.textContent = 'Mensagem enviada com sucesso! Obrigado.';
-          contactForm.reset(); // Limpa o formulário
-        } else {
-          const errorData = await response.json();
-          formStatus.className = 'error-message';
-          formStatus.textContent = `Erro ao enviar mensagem: ${errorData.message || 'Ocorreu um erro.'}`;
-        }
-      } catch (error) {
-        formStatus.className = 'error-message';
-        formStatus.textContent = 'Ocorreu um erro de rede. Por favor, tente novamente mais tarde.';
-        console.error('Erro:', error);
-      }
-    });
-  </script>
 </body>
 </html>
