@@ -142,8 +142,8 @@
             const data = Object.fromEntries(formData.entries());
 
             try {
-                // Envia os dados para o seu servidor Node.js (rota /send-email)
-                const response = await fetch('/send-email', { // Use a rota do servidor
+                // ALTERAÇÃO AQUI: Aponta para o URL da Netlify Function
+                const response = await fetch('/.netlify/functions/send-email', { // <-- A ÚNICA LINHA QUE MUDA
                     method: 'POST', // O método de envio é POST
                     headers: {
                         'Content-Type': 'application/json' // Indica que estamos a enviar JSON
@@ -156,16 +156,16 @@
                     formStatus.className = 'success-message'; // Adiciona classe CSS para sucesso
                     formStatus.textContent = 'Mensagem enviada com sucesso! Obrigado.'; // Mensagem de sucesso
                     contactForm.reset(); // Limpa todos os campos do formulário
-                    console.log('Formulário submetido com sucesso. Verifique o terminal do servidor.'); // Log para depuração
+                    console.log('Formulário submetido com sucesso. Verifique os logs da Netlify Function.'); // Log para depuração
                 } else {
                     // Se a resposta não foi bem-sucedida, tenta ler a mensagem de erro do servidor
                     const errorData = await response.json();
                     formStatus.className = 'error-message'; // Adiciona classe CSS para erro
                     formStatus.textContent = `Erro ao enviar mensagem: ${errorData.message || 'Ocorreu um erro desconhecido.'}`; // Mensagem de erro
-                    console.error('Erro na resposta do servidor:', errorData); // Log para depuração
+                    console.error('Erro na resposta da Netlify Function:', errorData); // Log para depuração
                 }
             } catch (error) {
-                // Captura erros de rede (se o servidor não estiver acessível, por exemplo)
+                // Captura erros de rede (se a função não estiver acessível, por exemplo)
                 formStatus.className = 'error-message'; // Adiciona classe CSS para erro
                 formStatus.textContent = 'Ocorreu um erro de rede. Por favor, tente novamente mais tarde.'; // Mensagem de erro de rede
                 console.error('Erro de rede ou JavaScript:', error); // Este erro aparecerá na Consola do navegador
