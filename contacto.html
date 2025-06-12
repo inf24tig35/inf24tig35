@@ -5,6 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contacto</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Estilos para o formulário (pode transferir estes para o seu styles.css principal) */
+    form {
+      max-width: 600px; /* Aumentado para melhor visualização */
+      margin: 2em auto;
+      padding: 2em;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais visível */
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5em;
+      font-weight: bold;
+      color: #333;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 0.8em;
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif; /* Usar a fonte Inter */
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px; /* Altura mínima da textarea */
+    }
+    button[type="submit"] {
+      background-color: #202020;
+      color: white;
+      padding: 0.8em 1.5em;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: bold;
+      transition: background-color 0.3s ease; /* Transição suave ao passar o rato */
+      width: 100%; /* Botão ocupa toda a largura */
+    }
+    button[type="submit"]:hover {
+      background-color: #333;
+    }
+    .success-message {
+      color: #1a7f37; /* Um verde mais agradável */
+      text-align: center;
+      margin-top: 1.5em; /* Mais espaço */
+      font-weight: bold;
+      padding: 1em;
+      background-color: #e6ffe6; /* Fundo verde claro */
+      border-radius: 4px;
+      border: 1px solid #8cda8c;
+    }
+    .error-message {
+      color: #e03131; /* Um vermelho mais forte */
+      text-align: center;
+      margin-top: 1.5em;
+      font-weight: bold;
+      padding: 1em;
+      background-color: #ffe6e6; /* Fundo vermelho claro */
+      border-radius: 4px;
+      border: 1px solid #da8c8c;
+    }
+
+    /* Estilo adicional para garantir que a fonte Inter é aplicada */
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -22,22 +95,86 @@
   <main>
     <h2 style="text-align: center; margin-top: 1em;">Envia-nos uma mensagem e tira as tuas dúvidas!!</h2>
 
-    <form style="max-width: 400px; margin: 2em auto; background: #f9f9f9; padding: 2em; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required style="box-sizing: border-box;">
+    <!-- O formulário precisa de um ID para o JavaScript o encontrar -->
+    <form id="contactForm">
+      <label for="name">Nome:</label>
+      <!-- IMPORTANTE: name="name" (e não "nome") para corresponder ao que o server.js espera -->
+      <input type="text" id="name" name="name" required>
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required style="box-sizing: border-box;">
+      <!-- IMPORTANTE: name="email" (e não "email") para corresponder ao que o server.js espera -->
+      <input type="email" id="email" name="email" required>
 
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="5" required style="box-sizing: border-box;"></textarea>
+      <label for="subject">Assunto:</label>
+      <!-- IMPORTANTE: name="subject" (e não "assunto", se quiser usar no servidor) -->
+      <input type="text" id="subject" name="subject">
+
+      <label for="message">Mensagem:</label>
+      <!-- IMPORTANTE: name="message" (e não "mensagem") para corresponder ao que o server.js espera -->
+      <textarea id="message" name="message" rows="5" required></textarea>
 
       <button type="submit">Enviar</button>
+
+      <!-- Div para exibir mensagens de status -->
+      <div id="formStatus"></div>
     </form>
   </main>
 
   <footer>
     <p>&copy; 2025 - Projeto Ensino TI</p>
   </footer>
+
+  <!-- O SCRIPT JAVASCRIPT PRECISA DE ESTAR AQUI, ANTES DE </body> -->
+  <script>
+    // Seleciona o formulário pelo ID
+    const contactForm = document.getElementById('contactForm');
+    // Seleciona o div onde as mensagens de status serão exibidas
+    const formStatus = document.getElementById('formStatus');
+
+    // Adiciona um listener para o evento 'submit' do formulário
+    if (contactForm) { // Verifica se o formulário foi encontrado antes de adicionar o listener
+        contactForm.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Impede o envio tradicional do formulário (recarregamento da página)
+
+            // Coleta os dados do formulário
+            const formData = new FormData(contactForm);
+            // Converte os dados do formulário para um objeto JavaScript simples
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                // Envia os dados para o seu servidor Node.js (rota /send-email)
+                const response = await fetch('/send-email', { // Use a rota do servidor
+                    method: 'POST', // O método de envio é POST
+                    headers: {
+                        'Content-Type': 'application/json' // Indica que estamos a enviar JSON
+                    },
+                    body: JSON.stringify(data) // Converte o objeto de dados para uma string JSON
+                });
+
+                // Verifica se a resposta do servidor foi bem-sucedida (status 2xx)
+                if (response.ok) {
+                    formStatus.className = 'success-message'; // Adiciona classe CSS para sucesso
+                    formStatus.textContent = 'Mensagem enviada com sucesso! Obrigado.'; // Mensagem de sucesso
+                    contactForm.reset(); // Limpa todos os campos do formulário
+                    console.log('Formulário submetido com sucesso. Verifique o terminal do servidor.'); // Log para depuração
+                } else {
+                    // Se a resposta não foi bem-sucedida, tenta ler a mensagem de erro do servidor
+                    const errorData = await response.json();
+                    formStatus.className = 'error-message'; // Adiciona classe CSS para erro
+                    formStatus.textContent = `Erro ao enviar mensagem: ${errorData.message || 'Ocorreu um erro desconhecido.'}`; // Mensagem de erro
+                    console.error('Erro na resposta do servidor:', errorData); // Log para depuração
+                }
+            } catch (error) {
+                // Captura erros de rede (se o servidor não estiver acessível, por exemplo)
+                formStatus.className = 'error-message'; // Adiciona classe CSS para erro
+                formStatus.textContent = 'Ocorreu um erro de rede. Por favor, tente novamente mais tarde.'; // Mensagem de erro de rede
+                console.error('Erro de rede ou JavaScript:', error); // Este erro aparecerá na Consola do navegador
+            }
+        });
+    } else {
+        // Se o formulário não for encontrado, loga um erro na consola do navegador
+        console.error("Erro: Formulário com ID 'contactForm' não encontrado! Verifique o seu HTML.");
+    }
+  </script>
 </body>
 </html>
