@@ -23,53 +23,126 @@ A página Contacto possui um formulário de contacto simples com validação bá
 
 O código HTML e CSS foi validado utilizando os validadores oficiais da W3C, garantindo conformidade com os standards e evitando erros de sintaxe.
 
-## 3.6 Implementation details
+3.6 Implementation details
+HTML Minimum requirements (usage of)
 
+Requirement
 
-| Requirement                | Usage Example                                                                                      |
-|----------------------------|--------------------------------------------------------------------------------------------------|
-| Table                      | `<table><thead>...</thead><tbody>...</tbody></table>`                                            |
-| List                       | `<ul><li>Item 1</li><li>Item 2</li></ul>`                                                        |
-| Nested List                | `<ul><li>Item 1<ul><li>Nested 1</li></ul></li></ul>`                                              |
-| Highlight                  | `<p><em>exemplo</em> e <strong>destaque</strong> e <mark>marcação</mark></p>`                    |
-| Image                      | `<img src="images/educacao.jpg" alt="Imagem de educação" />`                                     |
-| Figure                     | `<figure><img src="images/educacao.jpg" alt="Educação"><figcaption>Descrição da imagem</figcaption></figure>` |
-| Figure Caption             | `<figcaption>Descrição da imagem</figcaption>`                                                  |
-| Internal Link              | `<a href="recursos.html">Recursos</a>`                                                          |
-| External Link              | `<a href="https://github.com/Duarte35/ensino_ti" target="_blank">Repositório GitHub</a>`          |
-| Form                       | `<form>...</form>`                                                                               |
+Usage Example
 
-## CSS Minimum requirements (usage of/change of)
+Table
 
-| Requirement                | Usage Example                                      |
-|----------------------------|--------------------------------------------------|
-| Type selector              | `body { background-color: #f4f4f4; }`             |
-| Id selector                | `#conteudos-xml { display: flex; }`               |
-| Class Selector             | `.card { border-radius: 8px; }`                    |
-| Pseudo-class Selector      | `a:hover { text-decoration: underline; }`          |
-| Attribute Selector         | `input[type="email"] { padding: 0.75em; }`         |
-| Pseudo-element Selector    | `h3::before { content: "📄 "; }`                    |
-| Text style                 | `strong { color: #b30000; }`                        |
-| Font style                 | `body { font-family: Arial, sans-serif; }`         |
-| Background style           | `header, footer { background-color: #202020; }`    |
-| float/position style       | `#conteudos-xml { flex-wrap: wrap; }`              |
-| List style                 | `ul { list-style: none; }`                          |
-| Box element style          | `.card { box-shadow: 0 2px 5px rgba(0,0,0,0.1); }` |
-| table style                | `table { border-collapse: collapse; }`             |
-| Responsability style       | `@media screen and (max-width: 768px) { ... }`     |
+Em sobre.html para a lista de disciplinas: <table/>, <thead/>, <tbody/>, <tr/>, <th/>, <td/>.
 
-## Other Minimum requirements (location)
+List
 
-| Requirement                | Usage Example                                       |
-|----------------------------|---------------------------------------------------|
-| XML file                   | `recursos.xml`                                     |
-| XSD file                   | `schema.xsd`                                      |
+Em todos os ficheiros HTML para navegação: <nav><ul><li><a href="index.html">Início</a></li></ul></nav>.
 
-## 3.7 Other relevant implementation details
+Nested List
 
-- Utilização de Javascript para carregar o conteúdo XML dinamicamente no HTML.
-- Implementação de cartões com animações e emojis indicativos do tipo de recurso.
-- Uso de validação HTML5 nos formulários.
-- Design responsivo com media queries para diferentes tamanhos de ecrã.
-- Uso de flexbox para organização da interface e dos recursos.
+Não explicitamente usado nos ficheiros fornecidos.
+
+Highlight
+
+Em index.html para o bloco de citação: <strong>"A educação é a arma mais poderosa que você pode usar para mudar o mundo."</strong>.
+
+Image
+
+Em index.html: <img src="ensino.jpg" alt="Imagem de educação" style="width: 400px; border-radius:8px; margin-top:1em;">.
+
+Figure
+
+Não explicitamente usado nos ficheiros fornecidos.
+
+Figure Caption
+
+Não explicitamente usado nos ficheiros fornecidos, associado à tag figure.
+
+Internal Link
+
+Em todas as páginas para navegação: <a href="index.html">Início</a>, <a href="sobre.html">Sobre</a>, etc.
+
+External Link
+
+Em conteudos.xml, os links dentro da tag <link> são externos, ex: <link>https://www.exerciciosinterativos.pt/abc123</link>. Em recursos.html, o link para download do XML é para um ficheiro local, mas o XML em si contém links externos.
+
+Form
+
+Em contacto.html para o formulário de mensagem: <form id="contactForm">...</form>.
+
+CSS Minimum requirements (usage of/change of)
+
+Requirement
+
+Usage Example
+
+Type selector
+
+body { font-family: Arial, sans-serif; }, header, footer { background-color: #202020; }.
+
+Id selector
+
+#contactForm { max-width: 600px; } (em contacto.html <style>) ou #conteudos-xml { display: flex; } (em styles.css).
+
+Class Selector
+
+.success-message { color: #1a7f37; } (em contacto.html <style>), .error-message { color: #e03131; } (em contacto.html <style>).
+
+Pseudo-class Selector
+
+nav ul li a:hover { text-decoration: underline; } (em styles.css), button:hover { background-color: #444; } (em styles.css).
+
+Attribute Selector
+
+input[type="text"] { width: 100%; } (em contacto.html <style>), div[data-tipo="vídeo"] h3::before { content: "🎥 "; } (em styles.css).
+
+Pseudo-element Selector
+
+h3::before { content: "🎥 "; } (em styles.css para adicionar emojis baseados no atributo data-tipo).
+
+Text style
+
+text-align: center;, color: white;, font-weight: bold;, text-decoration: none;.
+
+Font style
+
+font-family: Arial, sans-serif;, font-size: 1em;. Em contacto.html, font-family: 'Inter', sans-serif;.
+
+Background style
+
+background-color: #202020; (header/footer), background-color: #f4f4f4; (body), background-color: #f9f9f9; (form).
+
+float/position style
+
+margin: 2em auto; (para centralizar o formulário em contacto.html e styles.css), display: flex; em nav ul e #conteudos-xml. Embora não seja float ou position diretamente, margin: auto e flexbox são mecanismos de posicionamento e layout.
+
+List style
+
+list-style: none; (para remover marcadores padrão da navegação em styles.css), padding: 0;, margin-left: 2em;.
+
+Box element style
+
+padding: 1em;, border: 1px solid #ddd;, border-radius: 8px;, box-sizing: border-box;, box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);.
+
+table style
+
+table { border-collapse: collapse; width: 100%; }, th, td { border: 1px solid #ddd; padding: 1em; text-align: left; }, thead { background-color: #202020; color: white; }, tbody tr:nth-child(even) { background-color: #f9f9f9; }.
+
+Responsability style
+
+@media screen and (max-width: 768px) { nav ul { flex-direction: column; gap: 1em; } form { width: 90%; } } (em styles.css). Uso de max-width e width: 100% para elementos flexíveis.
+
+Other Minimum requirements (location)
+
+Requirement
+
+Usage Example
+
+XML file
+
+conteudos.xml (na pasta raiz do projeto).
+
+XSD file
+
+schema.xsd (mencionado em conteudos.xml via xsi:noNamespaceSchemaLocation="schema.xsd").
 
