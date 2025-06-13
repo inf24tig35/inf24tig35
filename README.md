@@ -16,8 +16,6 @@ O projeto consiste numa plataforma educativa estática com conteúdos gratuitos 
 
 ## Galeria de Resultados
 
-
-
 | Página Inicial                          |     Sobre                           |
 |---------------------------------------- |--------------------------------------|
 | ![Index](doc/images/index.png)         | ![sobre](doc/images/objetivo.png)     |
@@ -40,7 +38,8 @@ O projeto consiste numa plataforma educativa estática com conteúdos gratuitos 
 * Nenhuma biblioteca externa foi usada para cumprir os critérios do trabalho (sem Bootstrap, sem jQuery).
 * Validação dos ficheiros feita via [W3C Validators](https://validator.w3.org/).
 
-* | Página Inicial                          |     Sobre                           |
+
+ | Página Inicial                        |     Sobre                           |
 |----------------------------------------|--------------------------------------|
 | ![Index](doc/images/index2.png)        | ![sobre](doc/images/sobre.png) |
 
