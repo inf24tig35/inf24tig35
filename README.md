@@ -18,11 +18,11 @@ O projeto consiste numa plataforma educativa estática com conteúdos gratuitos 
 
 | Página Inicial                          |     Sobre                           |
 |----------------------------------------|--------------------------------------|
-| ![Index](doc/images/index.png)        | ![sobre](doc/images/objetivo.png) |
+| ![Index](doc/images/index2.png)        | ![sobre](doc/images/sobre.png) |
 
 | Conteudos                               | Contactos                           |
 |----------------------------------------|--------------------------------------|
-| ![Conteudos](doc/images/conteudos.png) | ![contactos](doc/images/contacto.png) |
+| ![Conteudos](doc/images/recursos.png) | ![contactos](doc/images/contactos.png) |
 
 > Capturas de ecrã ilustrativas das páginas principais desenvolvidas.
 
@@ -37,6 +37,14 @@ O projeto consiste numa plataforma educativa estática com conteúdos gratuitos 
 
 * Nenhuma biblioteca externa foi usada para cumprir os critérios do trabalho (sem Bootstrap, sem jQuery).
 * Validação dos ficheiros feita via [W3C Validators](https://validator.w3.org/).
+
+* | Página Inicial                          |     Sobre                           |
+|----------------------------------------|--------------------------------------|
+| ![Index](doc/images/index.png)        | ![sobre](doc/images/objetivo.png) |
+
+| Conteudos                               | Contactos                           |
+|----------------------------------------|--------------------------------------|
+| ![Conteudos](doc/images/conteudos.png) | ![contactos](doc/images/contacto.png) |
 
 ## Relatório
 
