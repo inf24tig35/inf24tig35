@@ -16,9 +16,11 @@ O projeto consiste numa plataforma educativa estática com conteúdos gratuitos 
 
 ## Galeria de Resultados
 
+
+
 | Página Inicial                          |     Sobre                           |
-|----------------------------------------|--------------------------------------|
-| ![Index](doc/images/index.png)        | ![sobre](doc/images/objetivo.png) |
+|---------------------------------------- |--------------------------------------|
+| ![Index](doc/images/index.png)         | ![sobre](doc/images/objetivo.png)     |
 
 | Conteudos                               | Contactos                           |
 |----------------------------------------|--------------------------------------|
