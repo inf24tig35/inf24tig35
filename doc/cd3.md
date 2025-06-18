@@ -25,39 +25,57 @@ O código HTML e CSS foi validado utilizando os validadores oficiais da W3C, gar
 
 ## 3.6 Implementation details
 
+| Requirement          | Usage Example                                                                                                             |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------|
+| At least 4 pages     | [index.html](https://github.com/inf24tig35/inf24tig35/blob/main/index.html) <br> [sobre.html](https://github.com/inf24tig35/inf24tig35/blob/main/sobre.html) <br> [recursos.html](https://github.com/inf24tig35/inf24tig35/blob/main/recursos.html) <br> [contacto.html](https://github.com/inf24tig35/inf24tig35/blob/main/contacto.html) |
+| 1 XML document        | [recursos.xml](https://github.com/inf24tig35/inf24tig35/blob/main/recursos.xml)                                            |
+| 1 XSD document        | [schema.xsd](https://github.com/inf24tig35/inf24tig35/blob/main/schema.xsd)                                                |
+| CSS file (if any)     | [css/style.css](https://github.com/inf24tig35/inf24tig35/blob/main/css/style.css)                                          |
 
-| Requirement                | Usage Example                                                                                      |
-|----------------------------|--------------------------------------------------------------------------------------------------|
-| Table                      | `<table><thead>...</thead><tbody>...</tbody></table>`                                            |
-| List                       | `<ul><li>Item 1</li><li>Item 2</li></ul>`                                                        |
-| Nested List                | `<ul><li>Item 1<ul><li>Nested 1</li></ul></li></ul>`                                              |
-| Highlight                  | `<p><em>exemplo</em> e <strong>destaque</strong> e <mark>marcação</mark></p>`                    |
-| Image                      | `<img src="images/educacao.jpg" alt="Imagem de educação" />`                                     |
-| Figure                     | `<figure><img src="images/educacao.jpg" alt="Educação"><figcaption>Descrição da imagem</figcaption></figure>` |
-| Figure Caption             | `<figcaption>Descrição da imagem</figcaption>`                                                  |
-| Internal Link              | `<a href="recursos.html">Recursos</a>`                                                          |
-| External Link              | `<a href="https://github.com/Duarte35/ensino_ti" target="_blank">Repositório GitHub</a>`          |
-| Form                       | `<form>...</form>`                                                                               |
+### HTML Minimum requirements (usage of)
 
-## CSS Minimum requirements (usage of/change of)
+| Requirement     | Usage Example                                                                                           |
+|-----------------|-------------------------------------------------------------------------------------------------------|
+| XML file download | `<a href="recursos.xml" download>Download XML</a>`                                                    |
+| Table           | `<table><thead>...</thead><tbody>...</tbody></table>`                                                 |
+| List            | `<ul><li>Item 1</li><li>Item 2</li></ul>`                                                             |
+| Nested List     | `<ul><li>Item 1<ul><li>Nested 1</li></ul></li></ul>`                                                  |
+| Highlight       | `<em>exemplo</em>, <strong>destaque</strong>, <mark>marcação</mark>`                                  |
+| Image           | `<img src="images/educacao.jpg" alt="Imagem de educação" />`                                          |
+| Figure          | `<figure><img src="images/educacao.jpg" alt="Educação"><figcaption>Descrição da imagem</figcaption></figure>` |
+| Figure Caption  | `<figcaption>Descrição da imagem</figcaption>`                                                       |
+| Internal Link   | `<a href="recursos.html">Recursos</a>`                                                                |
+| External Link   | `<a href="https://github.com/inf24tig35/inf24tig35" target="_blank">Repositório GitHub</a>`            |
+| Form            | `<form>...</form>`                                                                                    |
 
-| Requirement                | Usage Example                                      |
-|----------------------------|--------------------------------------------------|
-| Type selector              | `body { background-color: #f4f4f4; }`             |
-| Id selector                | `#conteudos-xml { display: flex; }`               |
-| Class Selector             | `.card { border-radius: 8px; }`                    |
-| Pseudo-class Selector      | `a:hover { text-decoration: underline; }`          |
-| Attribute Selector         | `input[type="email"] { padding: 0.75em; }`         |
-| Pseudo-element Selector    | `h3::before { content: "📄 "; }`                    |
-| Text style                 | `strong { color: #b30000; }`                        |
-| Font style                 | `body { font-family: Arial, sans-serif; }`         |
-| Background style           | `header, footer { background-color: #202020; }`    |
-| float/position style       | `#conteudos-xml { flex-wrap: wrap; }`              |
-| List style                 | `ul { list-style: none; }`                          |
-| Box element style          | `.card { box-shadow: 0 2px 5px rgba(0,0,0,0.1); }` |
-| table style                | `table { border-collapse: collapse; }`             |
-| Responsability style       | `@media screen and (max-width: 768px) { ... }`     |
+### CSS Minimum requirements (usage of/change of)
 
+| Requirement             | Usage Example                                    |
+|-------------------------|------------------------------------------------|
+| Type selector           | `body { background-color: #f4f4f4; }`           |
+| Id selector             | `#conteudos-xml { display: flex; }`             |
+| Class Selector          | `.card { border-radius: 8px; }`                  |
+| Pseudo-class Selector   | `a:hover { text-decoration: underline; }`        |
+| Attribute Selector      | `input[type="email"] { padding: 0.75em; }`       |
+| Pseudo-element Selector | `h3::before { content: "📄 "; }`                  |
+| Combinator Selector     | `ul li { margin-bottom: 0.5em; }`                 |
+| Change Highlight style  | `mark { background-color: yellow; }`              |
+| Image insertion         | `header { background-image: url('banner.jpg'); }` |
+| Hide an element         | `.hidden { display: none; }`                       |
+| Text style              | `strong { color: #b30000; }`                       |
+| Font style              | `body { font-family: Arial, sans-serif; }`        |
+| Background style        | `header, footer { background-color: #202020; }`   |
+| float/position style    | `#conteudos-xml { flex-wrap: wrap; }`             |
+| List style              | `ul { list-style: none; }`                         |
+| Box element style       | `.card { box-shadow: 0 2px 5px rgba(0,0,0,0.1); }`|
+| table style             | `table { border-collapse: collapse; }`            |
+| Responsibility style 2 screen sizes | `@media screen and (max-width: 768px) { ... }` |
+
+---
+
+**Descrição da validação XML**
+
+A validação do arquivo XML `recursos.xml` foi efetuada utilizando o ficheiro XSD `schema.xsd`, garantindo conformidade com o esquema definido. Utilizou-se uma ferramenta online de validação XML, como [XML Validation](https://www.xmlvalidation.com/), para assegurar que o documento está livre de erros e respeita a estrutura definida.
 ## Other Minimum requirements (location)
 
 | Requirement                | Usage Example                                       |
