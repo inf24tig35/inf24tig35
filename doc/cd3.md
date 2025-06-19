@@ -92,9 +92,6 @@ Neste projeto, foram adicionados diversos elementos que valorizam a aplicação,
 | Com JavaScript, alterar conteúdo | Utilização de `fetch()` para carregar dados do XML e atualizar o conteúdo da página dinamicamente.    |
 | Com JavaScript, alterar estilo   | Aplicação de animações CSS via JavaScript ao interagir com cartões de recursos.                        |
 | Com JavaScript, carregar XML     | Função JavaScript para ler o ficheiro `recursos.xml` e mostrar os dados na página.                     |
-| Elemento `<video>`                | (Inserir link/exemplo se usares vídeo na página)                                                      |
-| Elemento `<audio>`                | (Inserir link/exemplo se usares áudio na página)                                                      |
-| Elemento `<canvas>`               | (Inserir link/exemplo se usares canvas para gráficos ou desenhos)                                     |
 | Com CSS, Flexbox                 | `.card { display: flex; flex-direction: column; }` para organizar os cartões de recursos.             |
 | Com CSS, transição               | `.card { transition: box-shadow 0.3s ease; }` para suavizar efeitos ao passar o cursor sobre cartões. |
 | Com CSS, transformação           | `.card:hover { transform: scale(1.05); }` para ampliar o cartão quando focado.                        |
